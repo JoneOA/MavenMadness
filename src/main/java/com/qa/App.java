@@ -14,4 +14,9 @@ public class App
     public int simpleMethod(int a, int b) {
     return a;
     }
+
+    public void blackjack() {
+
+    }
+
 }

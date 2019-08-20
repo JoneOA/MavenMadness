@@ -20,9 +20,17 @@ public class AppTest
     }
 
     @Test
-    public void simpleTest1() {
+    public void simpleTest() {
        app = new App();
-       int total = app.simpleMethod(1,2);
-       assertEquals(total, 1);
+       assertEquals(app.simpleMethod(1,2), 1);
+    }
+
+    @Test
+    public void winnerTest() {
+       app = new App();
+       assertEquals(Blackjack.compareValues(21,17), 21);
+       assertEquals(Blackjack.compareValues(16,18), 18);
+       assertEquals(Blackjack.compareValues(22,18), 18);
+       assertEquals(Blackjack.compareValues(21,100), 21);
     }
 }
