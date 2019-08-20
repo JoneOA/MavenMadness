@@ -1,6 +1,7 @@
 package com.qa;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -27,10 +28,14 @@ public class AppTest
 
     @Test
     public void winnerTest() {
-       app = new App();
        assertEquals(Blackjack.compareValues(21,17), 21);
        assertEquals(Blackjack.compareValues(16,18), 18);
        assertEquals(Blackjack.compareValues(22,18), 18);
        assertEquals(Blackjack.compareValues(21,100), 21);
+    }
+
+    @Test
+    public void newCardTest() {
+       assertNotNull(Blackjack.newCard());
     }
 }
